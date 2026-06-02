@@ -1,49 +1,51 @@
 # Clarity Boost for Photoshop 2020
 
-Clarity Boost 是一个面向 Adobe Photoshop 2020 的 CEP 面板插件，用来提高图片清晰度。它通过高反差保留、图层混合模式、透明度控制和可选细节锐化来增强边缘与纹理。
+这是插件的主文件夹。Clarity Boost 是一个适用于 Adobe Photoshop 2020 的第三方 CEP 面板插件，用来提高图片清晰度。
 
-## 功能
+## 一键安装
 
-- 自然增强：适合人像、产品图、日常修图。
-- 细节锐化：适合纹理、建筑、风景局部。
-- 强力清晰：适合轻微虚焦或需要更明显边缘的图片。
-- 减少彩色边缘：对增强图层去色，降低彩色光晕。
-- 保留可编辑增强图层：处理后可继续调节图层透明度或删除增强层。
-
-## Photoshop 兼容性
-
-此项目按 Photoshop 2020 设计，manifest 中限制为 Photoshop 21.x：
-
-- Photoshop host：PHSP / PHXS
-- Host version：21.0 到 21.9
-- CEP runtime：CSXS 9.0
-
-## 安装
-
-1. 关闭 Photoshop。
-2. 在 PowerShell 中进入本目录。
-3. 运行：
+关闭 Photoshop 后，在当前文件夹打开 PowerShell，运行：
 
 ```powershell
-.\Install-ClarityBoost.ps1
+powershell -ExecutionPolicy Bypass -File .\Install-ClarityBoost.ps1
 ```
 
-4. 如果插件没有出现在 Photoshop 菜单中，双击导入：
+如果 Photoshop 里没有出现插件，双击导入：
 
 ```text
 enable-debug-mode-ps2020.reg
 ```
 
-5. 重启 Photoshop。
-6. 在 Photoshop 中打开：`窗口 > 扩展功能 > Clarity Boost`。
+然后重启 Photoshop，在菜单中打开：
 
-## 使用
+```text
+窗口 > 扩展功能 > Clarity Boost
+```
 
-1. 打开一张图片。
+## 使用方法
+
+1. 打开图片。
 2. 选中要增强的图层。
-3. 选择增强模式。
-4. 调整强度和边缘半径。
-5. 点击“应用清晰度增强”。
+3. 选择 `自然增强`、`细节锐化` 或 `强力清晰`。
+4. 调整 `强度` 和 `边缘半径`。
+5. 点击 `应用清晰度增强`。
+
+默认会保留一个增强图层，方便继续调节透明度或删除。
+
+## 功能
+
+- 自然增强：适合人像、产品图、日常照片。
+- 细节锐化：适合纹理、建筑、风景。
+- 强力清晰：适合轻微虚焦或需要明显边缘的图片。
+- 减少彩色边缘：降低彩色光晕。
+- 保留可编辑增强图层：方便后期微调。
+
+## 兼容性
+
+- Adobe Photoshop 2020
+- Photoshop 21.x
+- CEP / CSXS 9
+- Windows
 
 ## 文件结构
 
@@ -59,6 +61,6 @@ photoshop-clarity-boost/
   enable-debug-mode-ps2020.reg  未签名 CEP 插件调试开关
 ```
 
-## 注意
+## 说明
 
-这是未签名 CEP 插件。正式分发时建议使用 Adobe CEP signing 工具签名，或在内部使用时开启 PlayerDebugMode。
+这是第三方插件，不是 Adobe 官方插件。Adobe 和 Photoshop 是 Adobe 的商标，本项目只用于说明插件兼容 Adobe Photoshop 2020。
