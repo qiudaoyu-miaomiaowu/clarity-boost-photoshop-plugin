@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clarity Boost</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <main class="panel">
+      <header class="panel-header">
+        <div>
+          <h1>Clarity Boost</h1>
+          <p>Photoshop 2020 清晰度增强</p>
+        </div>
+        <span class="version">1.0</span>
+      </header>
+
+      <section class="control-group">
+        <label class="label" for="mode">增强模式</label>
+        <select id="mode" class="select">
+          <option value="balanced">自然增强</option>
+          <option value="detail">细节锐化</option>
+          <option value="strong">强力清晰</option>
+        </select>
+      </section>
+
+      <section class="control-group">
+        <div class="range-row">
+          <label class="label" for="amount">强度</label>
+          <output id="amountValue">55%</output>
+        </div>
+        <input id="amount" class="range" type="range" min="10" max="100" value="55">
+      </section>
+
+      <section class="control-group">
+        <div class="range-row">
+          <label class="label" for="radius">边缘半径</label>
+          <output id="radiusValue">2.0 px</output>
+        </div>
+        <input id="radius" class="range" type="range" min="5" max="80" value="20">
+      </section>
+
+      <section class="options">
+        <label class="check-row">
+          <input id="protectColor" type="checkbox" checked>
+          <span>减少彩色边缘</span>
+        </label>
+        <label class="check-row">
+          <input id="keepEditable" type="checkbox" checked>
+          <span>保留可编辑增强图层</span>
+        </label>
+      </section>
+
+      <section class="actions">
+        <button id="enhanceButton" class="primary-button" type="button">应用清晰度增强</button>
+        <button id="undoButton" class="secondary-button" type="button">撤销上一步</button>
+      </section>
+
+      <p id="status" class="status" role="status">打开图片后，选择参数并应用。</p>
+    </main>
+
+    <script src="./js/CSInterface.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

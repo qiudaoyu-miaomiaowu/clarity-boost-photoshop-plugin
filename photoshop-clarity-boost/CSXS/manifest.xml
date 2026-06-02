@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="7.0"
+  ExtensionBundleId="com.codex.clarityboost"
+  ExtensionBundleVersion="1.0.0"
+  ExtensionBundleName="Clarity Boost">
+  <ExtensionList>
+    <Extension Id="com.codex.clarityboost.panel" Version="1.0.0" />
+  </ExtensionList>
+
+  <ExecutionEnvironment>
+    <HostList>
+      <Host Name="PHSP" Version="[21.0,21.9]" />
+      <Host Name="PHXS" Version="[21.0,21.9]" />
+    </HostList>
+    <LocaleList>
+      <Locale Code="All" />
+    </LocaleList>
+    <RequiredRuntimeList>
+      <RequiredRuntime Name="CSXS" Version="9.0" />
+    </RequiredRuntimeList>
+  </ExecutionEnvironment>
+
+  <DispatchInfoList>
+    <Extension Id="com.codex.clarityboost.panel">
+      <DispatchInfo>
+        <Resources>
+          <MainPath>./index.html</MainPath>
+          <ScriptPath>./jsx/clarityBoost.jsx</ScriptPath>
+        </Resources>
+        <Lifecycle>
+          <AutoVisible>true</AutoVisible>
+        </Lifecycle>
+        <UI>
+          <Type>Panel</Type>
+          <Menu>Clarity Boost</Menu>
+          <Geometry>
+            <Size>
+              <Width>360</Width>
+              <Height>520</Height>
+            </Size>
+            <MinSize>
+              <Width>320</Width>
+              <Height>460</Height>
+            </MinSize>
+          </Geometry>
+        </UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>
