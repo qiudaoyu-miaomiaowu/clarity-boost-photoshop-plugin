@@ -9,21 +9,14 @@
 1. 点击右上角绿色 `Code` 按钮。
 2. 选择 `Download ZIP` 下载项目。
 3. 解压 ZIP 文件。
-4. 进入解压后的 `photoshop-clarity-boost` 文件夹。
-5. 在 PowerShell 中运行：
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\Install-ClarityBoost.ps1
-```
-
-6. 如果 Photoshop 里没有显示插件，双击运行：
+4. 双击运行解压后的：
 
 ```text
-enable-debug-mode-ps2020.reg
+一键安装.bat
 ```
 
-7. 重启 Photoshop 2020。
-8. 在 Photoshop 中打开：
+5. 重启 Photoshop 2020。
+6. 在 Photoshop 中打开：
 
 ```text
 窗口 > 扩展功能 > Clarity Boost
@@ -70,11 +63,16 @@ photoshop-clarity-boost/
 
 ### Photoshop 里找不到插件怎么办？
 
-先关闭 Photoshop，双击 `photoshop-clarity-boost/enable-debug-mode-ps2020.reg`，确认导入注册表后重新打开 Photoshop。
+先关闭 Photoshop，重新双击 `一键安装.bat`，完成后再打开 Photoshop。
 
 ### 安装脚本做了什么？
 
-安装脚本会把插件复制到 Photoshop CEP 扩展目录：
+安装脚本会做两件事：
+
+1. 把插件复制到 Photoshop CEP 扩展目录。
+2. 自动开启 Photoshop 2020 加载本地插件需要的 CEP 调试开关。
+
+插件安装目录：
 
 ```text
 %APPDATA%\Adobe\CEP\extensions\com.codex.clarityboost

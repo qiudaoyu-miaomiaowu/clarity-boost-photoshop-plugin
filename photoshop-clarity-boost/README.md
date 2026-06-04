@@ -4,19 +4,19 @@
 
 ## 一键安装
 
-关闭 Photoshop 后，在当前文件夹打开 PowerShell，运行：
+如果你是从 GitHub 下载的完整项目，关闭 Photoshop 后，直接双击根目录的：
+
+```text
+一键安装.bat
+```
+
+如果你只复制了当前插件文件夹，也可以在当前文件夹打开 PowerShell，运行：
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\Install-ClarityBoost.ps1
 ```
 
-如果 Photoshop 里没有出现插件，双击导入：
-
-```text
-enable-debug-mode-ps2020.reg
-```
-
-然后重启 Photoshop，在菜单中打开：
+安装完成后重启 Photoshop，在菜单中打开：
 
 ```text
 窗口 > 扩展功能 > Clarity Boost
